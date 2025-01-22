@@ -1,8 +1,15 @@
 import React from 'react';
 import TypingEffect from './TypingEffect';
 import food from '../assests/food.png';  // Path to your uploaded food image
+import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
+
+  const navigate = useNavigate();
+  
+  const handleClick = () => {
+    navigate('/diet-plan');
+  };
   return (
     <section className="flex items-center justify-center min-h-screen p-4 bg-gradient-to-r from-blue-100 to-gray-50">
       {/* Left side content: Text and typing effect */}
@@ -15,7 +22,7 @@ const Hero = () => {
         </p>
 
         {/* Call to Action Button */}
-        <button className="mt-6 px-6 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-md">
+        <button className="mt-6 px-6 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded-lg shadow-md" onClick={handleClick}>
           Get Started
         </button>
       </div>

@@ -1,22 +1,29 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
-    <header className="fixed top-0 left-0 w-full bg-blue-900 text-white z-10 shadow-md">
-      <div className="max-w-screen-xl mx-auto p-4 flex justify-between items-center">
-        {/* Logo or Website Name */}
-        <div className="text-lg font-semibold">HealthJourney</div>
-
-        {/* Navigation Links */}
-        <nav>
-          <ul className="flex space-x-6">
-            <li><a href="#home" className="hover:text-gray-300">Home</a></li>
-            <li><a href="#about" className="hover:text-gray-300">About</a></li>
-            <li><a href="#services" className="hover:text-gray-300">Services</a></li>
-            <li><a href="#contact" className="hover:text-gray-300">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+    <header className=" w-full bg-blue-500 text-white shadow-md z-10">
+      <nav className="container mx-auto px-4 py-3 flex justify-between items-center">
+        <h1 className="text-xl font-bold">HealthJourney</h1>
+        <ul className="flex space-x-4">
+          <li>
+            <Link to="/" className="hover:underline">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/diet-plan" className="hover:underline">
+              My Diet Plan
+            </Link>
+          </li>
+          <li>
+            <Link to="/blogs" className="hover:underline">
+              Blogs
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 };
